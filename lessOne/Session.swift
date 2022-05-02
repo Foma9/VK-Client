@@ -12,7 +12,7 @@ struct Session {
     static var instance = Session()
 
     var token = "" // Хранение токена
-    var userId = "" // Хранение индентификатора
+    var userId = 0 // Хранение индентификатора
 
 
 }
