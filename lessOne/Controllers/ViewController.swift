@@ -8,80 +8,82 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
+    // MARK: - IBOutlets
+
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: UITextField!
-
     @IBOutlet weak var buttonEntry: UIButton!
-
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var theThirdView: UIView!
 
+    // MARK: - Animation
+
     let fromEntryTabBarSegue = "fromEntryTabBarSegue"
 
-//    func loadAnimate(currentCount: Int, totalCount: Int) {
-//
-//        firstView.alpha = 1
-//        secondView.alpha = 0
-//        theThirdView.alpha = 0
-//
-//        UIView.animate(withDuration: 1) {[weak self] in
-//            self?.firstView.alpha = 0
-//            self?.secondView.alpha = 1
-//        } completion: { _ in
-//            UIView.animate(withDuration: 1) {[weak self] in
-//                self?.secondView.alpha = 0
-//                self?.theThirdView.alpha = 1
-//            } completion: { _ in
-//                UIView.animate(withDuration: 1) {[weak self] in
-//                    self?.theThirdView.alpha = 0
-//                    self?.firstView.alpha = 1
-//                } completion: { [weak self] _ in
-//                    if currentCount + 1 <= totalCount {
-//                        self?.loadAnimate(currentCount: currentCount + 1, totalCount: totalCount)
-//                        self?.loginTextField.text = String (currentCount + 1)
-//                    }
-//                    else {return}
-//                }
-//            }
-//        }
-//    }
-//
-//    func animateDelay(currentCount: Int, totalCount: Int) {
-//        firstView.alpha = 1
-//        secondView.alpha = 0
-//        theThirdView.alpha = 0
-//
-//        UIView.animate(withDuration: 1,
-//                       delay: 0,
-//                       options: [],
-//                       animations: { [weak self] in
-//            self?.firstView.alpha = 0
-//            self?.secondView.alpha = 1
-//        }, completion: nil)
-//        UIView.animate(withDuration: 1,
-//                       delay: 1,
-//                       options: [],
-//                       animations: { [weak self] in
-//            self?.secondView.alpha = 0
-//            self?.theThirdView.alpha = 1
-//        }, completion: nil)
-//        UIView.animate(withDuration: 1,
-//                       delay: 2,
-//                       options: [],
-//                       animations: { [weak self] in
-//            self?.secondView.alpha = 0
-//            self?.theThirdView.alpha = 1
-//        }, completion: { [weak self] _ in
-//            if currentCount + 1 <= totalCount {
-//                self?.animateDelay(currentCount: currentCount + 1, totalCount: totalCount)
-//                self?.loginTextField.text = String (currentCount + 1)
-//            }
-//            else {return}
-//        })
-//    }
+    //    func loadAnimate(currentCount: Int, totalCount: Int) {
+    //
+    //        firstView.alpha = 1
+    //        secondView.alpha = 0
+    //        theThirdView.alpha = 0
+    //
+    //        UIView.animate(withDuration: 1) {[weak self] in
+    //            self?.firstView.alpha = 0
+    //            self?.secondView.alpha = 1
+    //        } completion: { _ in
+    //            UIView.animate(withDuration: 1) {[weak self] in
+    //                self?.secondView.alpha = 0
+    //                self?.theThirdView.alpha = 1
+    //            } completion: { _ in
+    //                UIView.animate(withDuration: 1) {[weak self] in
+    //                    self?.theThirdView.alpha = 0
+    //                    self?.firstView.alpha = 1
+    //                } completion: { [weak self] _ in
+    //                    if currentCount + 1 <= totalCount {
+    //                        self?.loadAnimate(currentCount: currentCount + 1, totalCount: totalCount)
+    //                        self?.loginTextField.text = String (currentCount + 1)
+    //                    }
+    //                    else {return}
+    //                }
+    //            }
+    //        }
+    //    }
+    //
+    //    func animateDelay(currentCount: Int, totalCount: Int) {
+    //        firstView.alpha = 1
+    //        secondView.alpha = 0
+    //        theThirdView.alpha = 0
+    //
+    //        UIView.animate(withDuration: 1,
+    //                       delay: 0,
+    //                       options: [],
+    //                       animations: { [weak self] in
+    //            self?.firstView.alpha = 0
+    //            self?.secondView.alpha = 1
+    //        }, completion: nil)
+    //        UIView.animate(withDuration: 1,
+    //                       delay: 1,
+    //                       options: [],
+    //                       animations: { [weak self] in
+    //            self?.secondView.alpha = 0
+    //            self?.theThirdView.alpha = 1
+    //        }, completion: nil)
+    //        UIView.animate(withDuration: 1,
+    //                       delay: 2,
+    //                       options: [],
+    //                       animations: { [weak self] in
+    //            self?.secondView.alpha = 0
+    //            self?.theThirdView.alpha = 1
+    //        }, completion: { [weak self] _ in
+    //            if currentCount + 1 <= totalCount {
+    //                self?.animateDelay(currentCount: currentCount + 1, totalCount: totalCount)
+    //                self?.loginTextField.text = String (currentCount + 1)
+    //            }
+    //            else {return}
+    //        })
+    //    }
     func animateKeyFrame(currentCount: Int, totalCount: Int) {
 
         firstView.alpha = 1
@@ -108,7 +110,7 @@ class ViewController: UIViewController {
         } completion: { [weak self] _ in
             if currentCount + 1 <= totalCount {
                 self?.animateKeyFrame(currentCount: currentCount + 1, totalCount: totalCount)
-//                self?.loginTextField.text = String (currentCount + 1)
+                //                self?.loginTextField.text = String (currentCount + 1)
             }
             else {return}
         }
@@ -124,6 +126,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // MARK: -
+
         let clickScreen = UITapGestureRecognizer(target: self, action: #selector(clickTap))
         self.view.addGestureRecognizer(clickScreen)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_ : )),

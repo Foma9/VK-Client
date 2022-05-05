@@ -11,8 +11,6 @@ struct Session {
     private init() {}
     static var instance = Session()
 
-    var token = "" // Хранение токена
-    var userId = 0 // Хранение индентификатора
-
-
+    var token = ""
+    var userId = ""
 }
