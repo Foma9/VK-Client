@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPA-HE-5rK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -10,19 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Authorization View Controller-->
+        <scene sceneID="HGW-7z-jXs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lessOne" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="ZPA-HE-5rK" customClass="AuthorizationViewController" customModule="lessOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="biK-9n-e3t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6W-u3-2Zs">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4P-eT-17g">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ks6-uk-HN4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u4P-eT-17g" firstAttribute="top" secondItem="Ks6-uk-HN4" secondAttribute="top" id="0ch-zB-4Sd"/>
+                            <constraint firstItem="Ks6-uk-HN4" firstAttribute="trailing" secondItem="u4P-eT-17g" secondAttribute="trailing" id="6C0-6n-nDq"/>
+                            <constraint firstItem="Ks6-uk-HN4" firstAttribute="bottom" secondItem="u4P-eT-17g" secondAttribute="bottom" id="NfO-id-O1w"/>
+                            <constraint firstItem="u4P-eT-17g" firstAttribute="leading" secondItem="Ks6-uk-HN4" secondAttribute="leading" id="nkH-dd-jCC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="u4P-eT-17g" id="KLl-0Q-6Ws"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="8cS-Id-fWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxR-4n-UNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1486" y="-113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lessOne" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6W-u3-2Zs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Had-16-gXF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlE-Lb-dZp">
                                                 <rect key="frame" x="75.5" y="434" width="263" height="30"/>
@@ -163,6 +198,7 @@
                             <constraint firstItem="Y6W-u3-2Zs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u0M-QV-fnm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="M5t-nM-d38"/>
                     <connections>
                         <outlet property="buttonEntry" destination="vlE-Lb-dZp" id="Q51-Qt-EcM"/>
                         <outlet property="firstView" destination="pTe-4V-gxr" id="2g5-Jg-oYp"/>

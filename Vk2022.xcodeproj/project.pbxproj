@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F42073272812C8E200A2A12C /* AnimationToFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42073262812C8E200A2A12C /* AnimationToFriends.swift */; };
+		F42073312817FA3500A2A12C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42073302817FA3500A2A12C /* Session.swift */; };
+		F420733828194E7200A2A12C /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420733728194E7200A2A12C /* AuthorizationViewController.swift */; };
+		F420733B281FD99C00A2A12C /* GetApiFromVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420733A281FD99C00A2A12C /* GetApiFromVK.swift */; };
 		F420A52027A9471A006E14C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420A51F27A9471A006E14C7 /* AppDelegate.swift */; };
 		F420A52227A9471A006E14C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420A52127A9471A006E14C7 /* SceneDelegate.swift */; };
 		F420FDF127A9C9BC00C153E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F420FDEF27A9C9BB00C153E6 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		F42073262812C8E200A2A12C /* AnimationToFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationToFriends.swift; sourceTree = "<group>"; };
+		F42073302817FA3500A2A12C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		F420733728194E7200A2A12C /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		F420733A281FD99C00A2A12C /* GetApiFromVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiFromVK.swift; sourceTree = "<group>"; };
 		F420A51C27A9471A006E14C7 /* lessOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lessOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F420A51F27A9471A006E14C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F420A52127A9471A006E14C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4207339281FD95000A2A12C /* AuthorizationAndApi */ = {
+			isa = PBXGroup;
+			children = (
+				F420733728194E7200A2A12C /* AuthorizationViewController.swift */,
+				F420733A281FD99C00A2A12C /* GetApiFromVK.swift */,
+			);
+			path = AuthorizationAndApi;
+			sourceTree = "<group>";
+		};
 		F420A51327A9471A006E14C7 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +138,7 @@
 				F420A51F27A9471A006E14C7 /* AppDelegate.swift */,
 				F420A52127A9471A006E14C7 /* SceneDelegate.swift */,
 				F49A9D6E27CA206300AF4960 /* Constant.swift */,
+				F42073302817FA3500A2A12C /* Session.swift */,
 				F49A9D7027CA302900AF4960 /* Storage.swift */,
 				F4644B4127BA4ACF001DC617 /* Cell */,
 				F4644B3D27BA47D2001DC617 /* Controllers */,
@@ -136,6 +152,7 @@
 		F4644B3D27BA47D2001DC617 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4207339281FD95000A2A12C /* AuthorizationAndApi */,
 				F49A9D7727CA559500AF4960 /* GalleryViewController */,
 				F49A9D7427CA435C00AF4960 /* FriendsViewController */,
 				F49A9D6927CA1C5D00AF4960 /* MyGroupsController */,
@@ -332,10 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F420733828194E7200A2A12C /* AuthorizationViewController.swift in Sources */,
 				F46BA39627B2685E0058B19D /* ViewController.swift in Sources */,
+				F42073312817FA3500A2A12C /* Session.swift in Sources */,
 				F4644B4427BA4B79001DC617 /* CustomTableViewCell.swift in Sources */,
 				F49A9D6F27CA206300AF4960 /* Constant.swift in Sources */,
 				F4644B4027BA4938001DC617 /* AllGroupsController.swift in Sources */,
+				F420733B281FD99C00A2A12C /* GetApiFromVK.swift in Sources */,
 				F4644B4827BA5734001DC617 /* Group.swift in Sources */,
 				F42073272812C8E200A2A12C /* AnimationToFriends.swift in Sources */,
 				F420A52027A9471A006E14C7 /* AppDelegate.swift in Sources */,
